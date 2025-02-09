@@ -1,0 +1,29 @@
+apiVersion: v2
+description: Deploy Solace PubSub+ Event Broker Singleton or HA redundancy group onto a Kubernetes Cluster
+name: pubsubplus
+version: 3.4.0
+icon: https://solaceproducts.github.io/pubsubplus-kubernetes-helm-quickstart/images/PubSubPlus.png
+kubeVersion: '>= 1.10.0-0'
+maintainers:
+  - name: Solace Community Forum
+    url: https://solace.community/
+  - name: Solace Support
+    url: https://solace.com/support/
+home: https://dev.solace.com
+sources:
+  - https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart
+keywords:
+- solace
+- pubsubplus
+- pubsub+
+- pubsub
+- messaging
+- advanced event broker
+- event broker
+- event mesh
+- event streaming
+- data streaming
+- event integration
+- middleware
+annotations:
+  charts.openshift.io/name: PubSub+ Event Broker
