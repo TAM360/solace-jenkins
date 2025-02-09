@@ -5,7 +5,7 @@ pipeline {
         HELM_CHART_REPO = "https://github.com/TAM360/solace-jenkins"
         HELM_RELEASE_NAME = "pubsubplus"
         HELM_NAMESPACE = "default"
-        KUBE_CONFIG = credentials('kubeconfig-id') // Store kubeconfig in Jenkins credentials as text
+        KUBECONFIG = credentials('kubeconfig-id') // Store kubeconfig in Jenkins credentials as text
     }
 
     stages {
