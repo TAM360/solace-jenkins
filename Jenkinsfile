@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
           steps {
-              git branch: 'main', credentialsId: 'git-credentials-id', url: "${HELM_CHART_REPO}"
+              git branch: 'main', credentialsId: 'github-pat', url: "${HELM_CHART_REPO}"
           }
         }
 
