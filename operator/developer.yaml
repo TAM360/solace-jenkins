@@ -1,0 +1,6 @@
+apiVersion: pubsubplus.solace.com/v1beta1
+kind: PubSubPlusEventBroker
+metadata:
+  name: dev-mode-exp
+spec:
+  developer: true"

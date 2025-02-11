@@ -25,12 +25,23 @@ pipeline {
             }
         }
 
-        stage('Deploy Solace PubSubPlus Helm Chart') {
+        // stage('Deploy Solace PubSubPlus Helm Chart') {
+        //     steps {
+        //         sh '''
+        //         echo $
+        //         cd chart
+        //         helm upgrade --install $HELM_RELEASE_NAME . --namespace $HELM_NAMESPACE --create-namespace
+        //         '''
+        //     }
+        // }
+
+        stage('Deploy Solace EventBroker CRD.') {
             steps {
                 sh '''
-                echo $
-                cd chart
-                helm upgrade --install $HELM_RELEASE_NAME . --namespace $HELM_NAMESPACE --create-namespace
+                cd operator
+                kubectl apply -f ha-mode.yaml
+                sleep 30
+                kubectl get pods -n $HELM_NAMESPACE
                 '''
             }
         }
